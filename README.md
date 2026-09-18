@@ -1,58 +1,255 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+💰 Personal Finance
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <strong>Simple Personal Finance Tracker built with Laravel</strong>
+</p><p align="center">
+  A web application for managing personal income and expenses in a simple, clean, and responsive interface.
+</p><p align="center">
+  <img src="https://img.shields.io/badge/Laravel-12.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel">
+  <img src="https://img.shields.io/badge/PHP-8.x-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
+  <img src="https://img.shields.io/badge/MySQL-8.x-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+  <img src="https://img.shields.io/badge/Blade-Template-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Blade">
+</p><p align="center">
+  <a href="#-features">Features</a> •
+  <a href="#-preview">Preview</a> •
+  <a href="#-tech-stack">Tech Stack</a> •
+  <a href="#-installation">Installation</a>
+</p>---
+
+📖 About
+
+Personal Finance is a personal finance management application built with Laravel and MySQL.
+
+The application is designed to make it easier to record and monitor daily financial transactions through a simple and responsive interface.
+
+This project is also part of my journey to learn and understand Laravel fundamentals, MVC architecture, database relationships, CRUD operations, Blade templates, and responsive web development.
+
+---
+
+✨ Features
+
+🏠 Home
+
+A simple dashboard that provides an overview of personal finances.
+
+💸 Transactions
+
+Manage financial transactions such as:
+
+- Add income
+- Add expenses
+- View transactions
+- Edit transactions
+- Delete transactions
+
+📊 Summary
+
+View a summary of financial activity to understand income, expenses, and overall balance.
+
+⚙️ More
+
+Additional application options and information.
+
+📱 Responsive
+
+Designed to work on:
+
+- 📱 Mobile
+- 📲 Tablet
+- 💻 Desktop
+
+---
+
+🖥️ Preview
+
+«Screenshots will be added as the project develops.»
+
+🏠 Home
+
+<p align="center">
+  <img src="screenshots/home.png" width="850" alt="Home Preview">
+</p>💸 Transactions
+
+<p align="center">
+  <img src="screenshots/transactions.png" width="850" alt="Transactions Preview">
+</p>📊 Summary
+
+<p align="center">
+  <img src="screenshots/summary.png" width="850" alt="Summary Preview">
+</p>---
+
+🛠️ Tech Stack
+
+Technology| Purpose
+🐘 PHP| Backend programming language
+🔥 Laravel| Web application framework
+🗄️ MySQL| Database
+🎨 Blade| Laravel templating engine
+🌐 HTML| Page structure
+🎨 CSS| User interface & responsive design
+⚡ JavaScript| Client-side interaction
+
+---
+
+📂 Project Structure
+
+personalFinance/
+│
+├── app/
+│   ├── Http/
+│   ├── Models/
+│   └── ...
+│
+├── bootstrap/
+├── config/
+├── database/
+│   ├── migrations/
+│   └── seeders/
+│
+├── public/
+│   ├── css/
+│   ├── js/
+│   └── ...
+│
+├── resources/
+│   └── views/
+│       ├── home/
+│       ├── transactions/
+│       ├── summary/
+│       └── more/
+│
+├── routes/
+│   └── web.php
+│
+├── storage/
+├── tests/
+│
+├── .env.example
+├── artisan
+├── composer.json
+├── composer.lock
+└── README.md
+
+---
+
+🚀 Installation
+
+1. Clone Repository
+
+git clone https://github.com/zhnif/personalFinance.git
+
+2. Enter Project
+
+cd personalFinance
+
+3. Install Dependencies
+
+composer install
+
+4. Create Environment File
+
+cp .env.example .env
+
+5. Generate Application Key
+
+php artisan key:generate
+
+6. Configure Database
+
+Open the ".env" file and configure your MySQL database:
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=personal_finance
+DB_USERNAME=root
+DB_PASSWORD=
+
+Create the database first, then run:
+
+php artisan migrate
+
+7. Start Laravel
+
+php artisan serve
+
+Open the application in your browser:
+
+http://127.0.0.1:8000
+
+---
+
+🔐 Environment
+
+Do not upload your ".env" file to GitHub.
+
+The ".env" file may contain sensitive configuration such as:
+
+- Database credentials
+- Application keys
+- API keys
+- Environment settings
+
+Use ".env.example" as the configuration template.
+
+---
+
+📚 What I'm Learning
+
+Through this project, I'm learning and practicing:
+
+- Laravel fundamentals
+- MVC architecture
+- Routing
+- Controllers
+- Models
+- Eloquent ORM
+- Blade templates
+- MySQL
+- CRUD operations
+- Form validation
+- Database migrations
+- Responsive web design
+- Git & GitHub
+
+---
+
+🗺️ Roadmap
+
+- [x] Laravel project setup
+- [x] Basic navigation
+- [x] Home page
+- [x] Transactions page
+- [x] Summary page
+- [x] More page
+- [ ] Transaction CRUD
+- [ ] Form validation
+- [ ] Database relationships
+- [ ] Financial statistics
+- [ ] Improved dashboard
+- [ ] Authentication
+- [ ] Deployment
+
+---
+
+📌 Project Status
+
+🚧 In Development
+
+This project is continuously being developed as a Laravel learning and portfolio project.
+
+---
+
+👨‍💻 Author
+
+Zaim Hanif Murtadlo
+
+Student & Web Development Learner
+
+GitHub: "@zhnif" (https://github.com/zhnif)
+
+---
+
+<p align="center">
+  made with zhnif
 </p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
-
-## Agentic Development
-
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
-
-```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
-```
-
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
