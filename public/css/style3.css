@@ -45,7 +45,8 @@ nav {
 }
 
 .dashboard-label,
-.section-label {
+.section-label,
+.page-label {
     display: block;
     font-size: 11px;
     font-weight: 800;
@@ -145,6 +146,7 @@ nav {
     background: #391E10;
     color: #E2CEB1;
     box-shadow: 0 20px 45px rgba(57, 30, 16, 0.18);
+    margin-bottom: 32px;
     animation: fadeUp 0.7s ease both;
 }
 
@@ -1324,6 +1326,167 @@ nav {
 }
 
 /* ---------------------------------------------------------
+   10b. DESKTOP SIDEBAR
+   Hidden on phones (the bottom nav is used there).
+   601px-1023px: compact icon-only rail. 1024px+: full sidebar.
+   --------------------------------------------------------- */
+.sidebar {
+    display: none;
+}
+
+@media (min-width: 601px) {
+    .sidebar {
+        position: fixed;
+        z-index: 50;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 76px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding: 20px 12px;
+        overflow-y: auto;
+        background: #391E10;
+        color: #E2CEB1;
+    }
+
+    main {
+        margin-left: 76px;
+    }
+
+    .sidebar-brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 18px;
+        color: #E2CEB1;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+    }
+
+    .sidebar-brand-icon {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 13px;
+        background: rgba(226, 206, 177, 0.14);
+        font-size: 20px;
+    }
+
+    .sidebar-nav-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        padding: 12px;
+        border-radius: 14px;
+        color: #E2CEB1;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 700;
+        opacity: 0.6;
+        transition: opacity 0.2s ease, background 0.2s ease;
+    }
+
+    .sidebar-nav-item:hover {
+        opacity: 1;
+        background: rgba(226, 206, 177, 0.08);
+    }
+
+    .sidebar-nav-item.active {
+        opacity: 1;
+        background: rgba(226, 206, 177, 0.16);
+    }
+
+    .sidebar-nav-icon {
+        width: 22px;
+        flex-shrink: 0;
+        text-align: center;
+        font-size: 19px;
+        line-height: 22px;
+    }
+
+    .sidebar-divider {
+        height: 1px;
+        margin: 12px 4px;
+        background: rgba(226, 206, 177, 0.15);
+    }
+
+    .sidebar-add {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 13px 12px;
+        border-radius: 14px;
+        background: #E2CEB1;
+        color: #391E10;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 800;
+        transition: transform 0.2s ease;
+    }
+
+    .sidebar-add:hover {
+        transform: translateY(-2px);
+    }
+
+    .sidebar-add:active {
+        transform: scale(0.97);
+    }
+
+    .sidebar a:focus-visible {
+        outline: 2px solid #E2CEB1;
+        outline-offset: 2px;
+    }
+
+    /* Rail mode: keep only the icon of each item */
+    .sidebar-brand > span:last-child,
+    .sidebar-nav-item > span:last-child,
+    .sidebar-add > span:last-child {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .sidebar {
+        width: 240px;
+        padding: 24px 16px;
+    }
+
+    main {
+        margin-left: 240px;
+    }
+
+    .sidebar-brand {
+        justify-content: flex-start;
+        padding: 0 8px;
+    }
+
+    .sidebar-nav-item {
+        justify-content: flex-start;
+        padding: 12px 14px;
+    }
+
+    .sidebar-add {
+        padding: 13px 14px;
+    }
+
+    .sidebar-brand > span:last-child,
+    .sidebar-nav-item > span:last-child,
+    .sidebar-add > span:last-child {
+        display: inline;
+    }
+}
+
+/* ---------------------------------------------------------
    11. MEDIA QUERIES (RESPONSIVE DESIGN)
    --------------------------------------------------------- */
 /* Tablet / Medium Screens */
@@ -1811,7 +1974,9 @@ nav {
     .page-transition,
     .mobile-nav-item,
     .mobile-nav-add,
-    .desktop-add {
+    .desktop-add,
+    .sidebar-nav-item,
+    .sidebar-add {
         animation: none;
         transition: none;
     }

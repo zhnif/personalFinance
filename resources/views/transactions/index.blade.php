@@ -13,10 +13,6 @@
             <h1>Semua Transaksi</h1>
             <p>Kelola seluruh pemasukan dan pengeluaran kamu.</p>
         </div>
-
-        <a href="{{ route('transactions.create') }}" class="desktop-add">
-            + Tambah Transaksi
-        </a>
     </div>
 
     {{-- Filter Section --}}
